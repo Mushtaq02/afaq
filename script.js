@@ -1,4 +1,4 @@
-// Global JavaScript for Afaq Youth Foundation Website - Multiple Pages
+// Global JavaScript for Afaq Youth Foundation Website - Multiple Pages - FIXED VERSION
 
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -48,41 +48,100 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mobile sidebar functionality
+    // Mobile sidebar functionality - FIXED VERSION
     const navToggler = document.getElementById('navToggler');
     const mobileSidebar = document.getElementById('mobileSidebar');
     const closeSidebar = document.getElementById('closeSidebar');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
 
-    // Open sidebar
-    if (navToggler) {
-        navToggler.addEventListener('click', function() {
-            if (mobileSidebar) mobileSidebar.classList.add('active');
-            if (sidebarOverlay) sidebarOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
+    // Debug logging
+    console.log('Navigation elements:', {
+        navToggler: !!navToggler,
+        mobileSidebar: !!mobileSidebar,
+        closeSidebar: !!closeSidebar,
+        sidebarOverlay: !!sidebarOverlay
+    });
+
+    // Open sidebar function
+    function openSidebar() {
+        console.log('Opening sidebar...');
+        if (mobileSidebar) {
+            mobileSidebar.classList.add('active');
+            console.log('Sidebar class added');
+        }
+        if (sidebarOverlay) {
+            sidebarOverlay.classList.add('active');
+            console.log('Overlay class added');
+        }
+        document.body.style.overflow = 'hidden';
     }
 
     // Close sidebar function
     function closeSidebarFunction() {
-        if (mobileSidebar) mobileSidebar.classList.remove('active');
-        if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+        console.log('Closing sidebar...');
+        if (mobileSidebar) {
+            mobileSidebar.classList.remove('active');
+        }
+        if (sidebarOverlay) {
+            sidebarOverlay.classList.remove('active');
+        }
         document.body.style.overflow = 'auto';
+    }
+
+    // Open sidebar event
+    if (navToggler) {
+        navToggler.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Nav toggler clicked');
+            openSidebar();
+        });
+        
+        // Also handle touch events for mobile
+        navToggler.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Nav toggler touched');
+            openSidebar();
+        });
     }
 
     // Close sidebar events
     if (closeSidebar) {
-        closeSidebar.addEventListener('click', closeSidebarFunction);
+        closeSidebar.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeSidebarFunction();
+        });
+        
+        closeSidebar.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeSidebarFunction();
+        });
     }
     
     if (sidebarOverlay) {
-        sidebarOverlay.addEventListener('click', closeSidebarFunction);
+        sidebarOverlay.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeSidebarFunction();
+        });
+        
+        sidebarOverlay.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeSidebarFunction();
+        });
     }
 
     // Close sidebar when clicking on links
     sidebarLinks.forEach(link => {
-        link.addEventListener('click', closeSidebarFunction);
+        link.addEventListener('click', function() {
+            // Small delay to allow navigation
+            setTimeout(closeSidebarFunction, 100);
+        });
     });
 
     // Active navigation link highlighting
@@ -118,6 +177,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Statistics counter animation
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number[data-count]');
+        
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-count'));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = Math.floor(current).toLocaleString('ar-SA');
+            }, 16);
+        });
+    }
+
+    // Trigger counter animation when stats section is visible
+    const statsSection = document.querySelector('.stat-item');
+    if (statsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(statsSection);
+    }
+
     // Form submission handling
     const forms = document.querySelectorAll('form');
     
@@ -146,7 +241,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const newsletterBtn = document.querySelector('.newsletter .btn');
     
     if (newsletterBtn) {
-        newsletterBtn.addEventListener('click', function() {
+        newsletterBtn.addEventListener('click', function(e) {
+            e.preventDefault();
             const emailInput = document.querySelector('.newsletter .form-control');
             const email = emailInput ? emailInput.value.trim() : '';
             
@@ -203,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
             max-width: 400px;
             transform: translateX(100%);
             transition: transform 0.3s ease;
+            font-family: 'Noto Sans Arabic', sans-serif;
         `;
         
         // Add to page
@@ -275,13 +372,87 @@ document.addEventListener('DOMContentLoaded', function() {
         AOS.init({
             duration: 1000,
             once: true,
-            offset: 100
+            offset: 100,
+            disable: 'mobile' // Disable on mobile for better performance
         });
     }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Image lazy loading fallback for older browsers
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                }
+            });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    // Touch gesture support for mobile sidebar
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 100;
+        const swipeDistance = touchEndX - touchStartX;
+        
+        // Swipe from right edge to open sidebar
+        if (touchStartX > window.innerWidth - 50 && swipeDistance < -swipeThreshold) {
+            openSidebar();
+        }
+        
+        // Swipe right to close sidebar
+        if (mobileSidebar && mobileSidebar.classList.contains('active') && swipeDistance > swipeThreshold) {
+            closeSidebarFunction();
+        }
+    }
+
+    // Viewport height fix for mobile browsers
+    function setViewportHeight() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+    window.addEventListener('orientationchange', setViewportHeight);
 
     // Console welcome message
     console.log('%c🌟 مرحباً بك في موقع مؤسسة آفاق شبابية! 🌟', 'color: #2DB5A5; font-size: 16px; font-weight: bold;');
     console.log('%cتم تطوير هذا الموقع باستخدام أحدث التقنيات لضمان أفضل تجربة مستخدم.', 'color: #666; font-size: 12px;');
+    console.log('%cFixed mobile responsiveness issues - Version 2.0', 'color: #FF8C42; font-size: 12px; font-weight: bold;');
 });
 
 // Global functions
@@ -291,6 +462,37 @@ window.AfaqWebsite = {
             detail: { message, type }
         });
         document.dispatchEvent(event);
+    },
+    
+    openSidebar: function() {
+        const mobileSidebar = document.getElementById('mobileSidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        
+        if (mobileSidebar) mobileSidebar.classList.add('active');
+        if (sidebarOverlay) sidebarOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    },
+    
+    closeSidebar: function() {
+        const mobileSidebar = document.getElementById('mobileSidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        
+        if (mobileSidebar) mobileSidebar.classList.remove('active');
+        if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
     }
 };
+
+// Service Worker registration for PWA support (optional)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+                console.log('ServiceWorker registration successful');
+            })
+            .catch(function(err) {
+                console.log('ServiceWorker registration failed');
+            });
+    });
+}
 
