@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة آفاق شبابية - الرئيسية</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="preloader-logo">
+            <div class="preloader-text">مؤسسة آفاق شبابية</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="logo">
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" type="button" id="navToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">البرامج</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">المشاريع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="sidebar-logo">
+            <button class="close-btn" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html" class="sidebar-link">الرئيسية</a></li>
+            <li><a href="about.html" class="sidebar-link">من نحن</a></li>
+            <li><a href="programs.html" class="sidebar-link">البرامج</a></li>
+            <li><a href="projects.html" class="sidebar-link">المشاريع</a></li>
+            <li><a href="news.html" class="sidebar-link">الأخبار</a></li>
+            <li><a href="contact.html" class="sidebar-link">تواصل معنا</a></li>
+        </ul>
+        <div class="sidebar-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8">
+                    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="hero-title">
+                            نحو مستقبل أفضل
+                            <span class="text-light">للشباب العربي</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            مؤسسة آفاق شبابية تعمل على تمكين الشباب وتطوير قدراتهم لبناء مجتمع أكثر ازدهاراً وتقدماً
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="about.html" class="btn btn-primary btn-lg me-3">اكتشف المزيد</a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg">انضم إلينا</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Arrow -->
+        <div class="scroll-down" data-aos="fade-up" data-aos-delay="1500">
+            <a href="#overview">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="content">
+                        <h2 class="section-title">نظرة عامة</h2>
+                        <p class="lead">
+                            مؤسسة آفاق شبابية هي منظمة غير ربحية تأسست عام 2020 بهدف تمكين الشباب العربي وتطوير قدراتهم في مختلف المجالات.
+                        </p>
+                        <p>
+                            نؤمن بأن الشباب هم محرك التغيير الحقيقي في المجتمع، ولذلك نعمل على توفير البرامج التدريبية والتطويرية التي تساعدهم على تحقيق أهدافهم وطموحاتهم.
+                        </p>
+                        <a href="about.html" class="btn btn-primary">اقرأ المزيد</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="فريق العمل" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-count="5000">0</h3>
+                        <p class="stat-label">مستفيد</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-count="50">0</h3>
+                        <p class="stat-label">برنامج</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-count="15">0</h3>
+                        <p class="stat-label">مدينة</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-count="100">0</h3>
+                        <p class="stat-label">متطوع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Programs -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">برامجنا المميزة</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        اكتشف أهم البرامج التي نقدمها لتطوير مهارات الشباب
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="program-icon mb-3">
+                                <i class="fas fa-graduation-cap fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">التدريب والتطوير</h5>
+                            <p class="card-text">برامج تدريبية متخصصة في مختلف المجالات لتطوير مهارات الشباب المهنية والشخصية.</p>
+                            <a href="programs.html" class="btn btn-outline-primary">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="program-icon mb-3">
+                                <i class="fas fa-users fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">القيادة الشبابية</h5>
+                            <p class="card-text">تنمية مهارات القيادة لدى الشباب وإعدادهم لتولي مناصب قيادية في المجتمع.</p>
+                            <a href="programs.html" class="btn btn-outline-primary">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="program-icon mb-3">
+                                <i class="fas fa-lightbulb fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">ريادة الأعمال</h5>
+                            <p class="card-text">دعم الشباب في تطوير أفكارهم الريادية وتحويلها إلى مشاريع ناجحة.</p>
+                            <a href="programs.html" class="btn btn-outline-primary">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="programs.html" class="btn btn-primary btn-lg">عرض جميع البرامج</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">آخر الأخبار</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        تابع أحدث أخبار وأنشطة المؤسسة
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="خبر 1">
+                        <div class="card-body">
+                            <div class="news-date text-primary mb-2">15 يونيو 2025</div>
+                            <h5 class="card-title">إطلاق برنامج جديد للتدريب على التكنولوجيا</h5>
+                            <p class="card-text">أعلنت المؤسسة عن إطلاق برنامج تدريبي جديد يهدف إلى تطوير مهارات الشباب في مجال التكنولوجيا...</p>
+                            <a href="news.html" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="خبر 2">
+                        <div class="card-body">
+                            <div class="news-date text-primary mb-2">10 يونيو 2025</div>
+                            <h5 class="card-title">نجاح مؤتمر القيادة الشبابية الثالث</h5>
+                            <p class="card-text">شهد المؤتمر السنوي الثالث للقيادة الشبابية مشاركة واسعة من الشباب من مختلف المحافظات...</p>
+                            <a href="news.html" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="خبر 3">
+                        <div class="card-body">
+                            <div class="news-date text-primary mb-2">5 يونيو 2025</div>
+                            <h5 class="card-title">شراكة جديدة مع جامعات محلية</h5>
+                            <p class="card-text">وقعت المؤسسة اتفاقيات شراكة مع عدة جامعات محلية لتطوير البرامج التدريبية والأكاديمية...</p>
+                            <a href="news.html" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="news.html" class="btn btn-primary btn-lg">عرض جميع الأخبار</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="footer-logo">
+                    <p>مؤسسة آفاق شبابية تعمل على تمكين الشباب وتطوير قدراتهم لبناء مستقبل أفضل.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="programs.html">البرامج</a></li>
+                        <li><a href="projects.html">المشاريع</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>الخدمات</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">التدريب</a></li>
+                        <li><a href="#">الاستشارات</a></li>
+                        <li><a href="#">ريادة الأعمال</a></li>
+                        <li><a href="#">العمل التطوعي</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>النشرة البريدية</h5>
+                    <p>اشترك في نشرتنا البريدية لتصلك آخر الأخبار والفعاليات</p>
+                    <div class="newsletter">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                            <button class="btn btn-primary" type="button">اشترك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 مؤسسة آفاق شبابية. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">سياسة الخصوصية</a>
+                    <a href="#" class="text-light">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    
+    <!-- Page-specific JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Counter animation for statistics
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            function animateCounter(element) {
+                const target = parseInt(element.getAttribute('data-count'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(current).toLocaleString();
+                }, 16);
+            }
+
+            // Intersection Observer for counter animation
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statNumbers.forEach(stat => {
+                counterObserver.observe(stat);
+            });
+        });
+    </script>
+</body>
+</html>
+

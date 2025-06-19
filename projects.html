@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشاريع - مؤسسة آفاق شبابية</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="preloader-logo">
+            <div class="preloader-text">مؤسسة آفاق شبابية</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="logo">
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" type="button" id="navToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">البرامج</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">المشاريع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="sidebar-logo">
+            <button class="close-btn" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html" class="sidebar-link">الرئيسية</a></li>
+            <li><a href="about.html" class="sidebar-link">من نحن</a></li>
+            <li><a href="programs.html" class="sidebar-link">البرامج</a></li>
+            <li><a href="projects.html" class="sidebar-link">المشاريع</a></li>
+            <li><a href="news.html" class="sidebar-link">الأخبار</a></li>
+            <li><a href="contact.html" class="sidebar-link">تواصل معنا</a></li>
+        </ul>
+        <div class="sidebar-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">المشاريع</h1>
+                <p class="page-subtitle">تعرف على المشاريع التي نفذتها المؤسسة وتأثيرها الإيجابي</p>
+                <nav class="breadcrumb-nav">
+                    <a href="index.html">الرئيسية</a> / المشاريع
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="مشروع التدريب المهني">
+                        <div class="card-body">
+                            <div class="project-status badge bg-success mb-2">مكتمل</div>
+                            <h4 class="card-title">مشروع التدريب المهني</h4>
+                            <p class="card-text">مشروع شامل لتدريب 1000 شاب وشابة على مهارات مهنية متنوعة في مجالات التكنولوجيا والإدارة والتسويق.</p>
+                            <div class="project-stats">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <h5 class="text-primary">1000</h5>
+                                        <small>مستفيد</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">12</h5>
+                                        <small>شهر</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">5</h5>
+                                        <small>مدن</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">تفاصيل المشروع</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="مبادرة القيادة الشبابية">
+                        <div class="card-body">
+                            <div class="project-status badge bg-warning mb-2">جاري التنفيذ</div>
+                            <h4 class="card-title">مبادرة القيادة الشبابية</h4>
+                            <p class="card-text">برنامج لإعداد جيل جديد من القادة الشباب القادرين على قيادة التغيير الإيجابي في مجتمعاتهم.</p>
+                            <div class="project-stats">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <h5 class="text-primary">500</h5>
+                                        <small>مستفيد</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">18</h5>
+                                        <small>شهر</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">8</h5>
+                                        <small>مدن</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">تفاصيل المشروع</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="حاضنة الأعمال الشبابية">
+                        <div class="card-body">
+                            <div class="project-status badge bg-success mb-2">مكتمل</div>
+                            <h4 class="card-title">حاضنة الأعمال الشبابية</h4>
+                            <p class="card-text">مشروع لدعم الشباب الراغبين في إطلاق مشاريعهم الريادية من خلال التدريب والتمويل والإرشاد.</p>
+                            <div class="project-stats">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <h5 class="text-primary">200</h5>
+                                        <small>مستفيد</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">24</h5>
+                                        <small>شهر</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">50</h5>
+                                        <small>مشروع</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">تفاصيل المشروع</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="مشروع التكنولوجيا للجميع">
+                        <div class="card-body">
+                            <div class="project-status badge bg-info mb-2">قادم</div>
+                            <h4 class="card-title">مشروع التكنولوجيا للجميع</h4>
+                            <p class="card-text">مبادرة لتعليم الشباب أساسيات التكنولوجيا والبرمجة وتطوير التطبيقات الذكية.</p>
+                            <div class="project-stats">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <h5 class="text-primary">800</h5>
+                                        <small>مستفيد</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">15</h5>
+                                        <small>شهر</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">10</h5>
+                                        <small>مدن</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">تفاصيل المشروع</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="مبادرة الشباب والبيئة">
+                        <div class="card-body">
+                            <div class="project-status badge bg-warning mb-2">جاري التنفيذ</div>
+                            <h4 class="card-title">مبادرة الشباب والبيئة</h4>
+                            <p class="card-text">مشروع توعوي بيئي يهدف إلى تثقيف الشباب حول قضايا البيئة وتشجيعهم على المشاركة في حلولها.</p>
+                            <div class="project-stats">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <h5 class="text-primary">300</h5>
+                                        <small>مستفيد</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">6</h5>
+                                        <small>شهر</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">3</h5>
+                                        <small>مدن</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">تفاصيل المشروع</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="برنامج المنح الدراسية">
+                        <div class="card-body">
+                            <div class="project-status badge bg-success mb-2">مكتمل</div>
+                            <h4 class="card-title">برنامج المنح الدراسية</h4>
+                            <p class="card-text">برنامج لتقديم منح دراسية للطلاب المتفوقين من الأسر ذات الدخل المحدود لمتابعة تعليمهم الجامعي.</p>
+                            <div class="project-stats">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <h5 class="text-primary">150</h5>
+                                        <small>مستفيد</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">48</h5>
+                                        <small>شهر</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary">12</h5>
+                                        <small>جامعة</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">تفاصيل المشروع</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Impact -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">تأثير مشاريعنا</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        الأرقام تتحدث عن نجاح مشاريعنا وتأثيرها الإيجابي
+                    </p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-count="3150">0</h3>
+                        <p class="stat-label">إجمالي المستفيدين</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-count="6">0</h3>
+                        <p class="stat-label">مشاريع منجزة</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-count="15">0</h3>
+                        <p class="stat-label">مدينة مستفيدة</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <h3 class="stat-number" data-count="85">0</h3>
+                        <p class="stat-label">% نسبة النجاح</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="footer-logo">
+                    <p>مؤسسة آفاق شبابية تعمل على تمكين الشباب وتطوير قدراتهم لبناء مستقبل أفضل.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="programs.html">البرامج</a></li>
+                        <li><a href="projects.html">المشاريع</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>الخدمات</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">التدريب</a></li>
+                        <li><a href="#">الاستشارات</a></li>
+                        <li><a href="#">ريادة الأعمال</a></li>
+                        <li><a href="#">العمل التطوعي</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>النشرة البريدية</h5>
+                    <p>اشترك في نشرتنا البريدية لتصلك آخر الأخبار والفعاليات</p>
+                    <div class="newsletter">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                            <button class="btn btn-primary" type="button">اشترك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 مؤسسة آفاق شبابية. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">سياسة الخصوصية</a>
+                    <a href="#" class="text-light">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    
+    <!-- Page-specific JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Counter animation for statistics
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            function animateCounter(element) {
+                const target = parseInt(element.getAttribute('data-count'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(current).toLocaleString();
+                }, 16);
+            }
+
+            // Intersection Observer for counter animation
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statNumbers.forEach(stat => {
+                counterObserver.observe(stat);
+            });
+        });
+    </script>
+</body>
+</html>
+

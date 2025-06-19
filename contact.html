@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - مؤسسة آفاق شبابية</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts - Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="preloader-logo">
+            <div class="preloader-text">مؤسسة آفاق شبابية</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="logo">
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" type="button" id="navToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">البرامج</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">المشاريع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="sidebar-logo">
+            <button class="close-btn" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html" class="sidebar-link">الرئيسية</a></li>
+            <li><a href="about.html" class="sidebar-link">من نحن</a></li>
+            <li><a href="programs.html" class="sidebar-link">البرامج</a></li>
+            <li><a href="projects.html" class="sidebar-link">المشاريع</a></li>
+            <li><a href="news.html" class="sidebar-link">الأخبار</a></li>
+            <li><a href="contact.html" class="sidebar-link">تواصل معنا</a></li>
+        </ul>
+        <div class="sidebar-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">تواصل معنا</h1>
+                <p class="page-subtitle">نحن هنا للإجابة على استفساراتك ومساعدتك</p>
+                <nav class="breadcrumb-nav">
+                    <a href="index.html">الرئيسية</a> / تواصل معنا
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-4" data-aos="fade-right">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">أرسل لنا رسالة</h3>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">الاسم الأول</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">الاسم الأخير</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">البريد الإلكتروني</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">رقم الهاتف</label>
+                                        <input type="tel" class="form-control" id="phone">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">الموضوع</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">اختر الموضوع</option>
+                                        <option value="programs">الاستفسار عن البرامج</option>
+                                        <option value="registration">التسجيل في البرامج</option>
+                                        <option value="partnership">الشراكة والتعاون</option>
+                                        <option value="volunteer">العمل التطوعي</option>
+                                        <option value="other">أخرى</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">الرسالة</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg">إرسال الرسالة</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-left">
+                    <!-- Contact Info -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">معلومات التواصل</h5>
+                            <div class="contact-item mb-3">
+                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                <div>
+                                    <strong>العنوان</strong><br>
+                                    شارع الملك فهد، الرياض<br>
+                                    المملكة العربية السعودية
+                                </div>
+                            </div>
+                            <div class="contact-item mb-3">
+                                <i class="fas fa-phone text-primary me-3"></i>
+                                <div>
+                                    <strong>الهاتف</strong><br>
+                                    +966 11 123 4567
+                                </div>
+                            </div>
+                            <div class="contact-item mb-3">
+                                <i class="fas fa-envelope text-primary me-3"></i>
+                                <div>
+                                    <strong>البريد الإلكتروني</strong><br>
+                                    info@afaqshabab.org
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock text-primary me-3"></i>
+                                <div>
+                                    <strong>ساعات العمل</strong><br>
+                                    الأحد - الخميس: 8:00 ص - 5:00 م<br>
+                                    الجمعة - السبت: مغلق
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-4">تابعنا على</h5>
+                            <div class="social-links">
+                                <a href="#" class="btn btn-outline-primary btn-lg me-2 mb-2">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-info btn-lg me-2 mb-2">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-danger btn-lg me-2 mb-2">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-lg mb-2">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">موقعنا</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        تفضل بزيارتنا في مقر المؤسسة
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.527026291577!2d45.04079644775278!3d12.80069258748423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3df5f7aa2acca79f%3A0x49e32f3ef43b6d0c!2z2K7ZiNixINmF2YPYs9ix2Iwg2LnYr9mG2Iwg2KfZhNmK2Y7ZhdmO2YY!5e1!3m2!1sar!2s!4v1750293252950!5m2!1sar!2s"
+                            width="1600" height="600" style="border:0; border-radius: 10px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">الأسئلة الشائعة</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        إجابات على أكثر الأسئلة شيوعاً
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="300">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1">
+                                    كيف يمكنني التسجيل في البرامج؟
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    يمكنك التسجيل في البرامج من خلال زيارة صفحة البرامج واختيار البرنامج المناسب، ثم
+                                    النقر على زر "التسجيل الآن" وملء النموذج المطلوب.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2">
+                                    هل البرامج مجانية؟
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    معظم برامجنا مجانية تماماً، وبعض البرامج المتخصصة قد تتطلب رسوماً رمزية لتغطية
+                                    تكاليف المواد والشهادات.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3">
+                                    ما هي شروط الانضمام للبرامج؟
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    الشروط تختلف حسب البرنامج، لكن بشكل عام نستهدف الشباب من عمر 18-35 سنة، مع وجود
+                                    استثناءات لبعض البرامج المتخصصة.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4">
+                                    كيف يمكنني التطوع مع المؤسسة؟
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    يمكنك التطوع معنا من خلال ملء نموذج التطوع في صفحة البرامج أو التواصل معنا مباشرة
+                                    عبر البريد الإلكتروني أو الهاتف.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="logo.jpg" alt="مؤسسة آفاق شبابية" class="footer-logo">
+                    <p>مؤسسة آفاق شبابية تعمل على تمكين الشباب وتطوير قدراتهم لبناء مستقبل أفضل.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="programs.html">البرامج</a></li>
+                        <li><a href="projects.html">المشاريع</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>الخدمات</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">التدريب</a></li>
+                        <li><a href="#">الاستشارات</a></li>
+                        <li><a href="#">ريادة الأعمال</a></li>
+                        <li><a href="#">العمل التطوعي</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>النشرة البريدية</h5>
+                    <p>اشترك في نشرتنا البريدية لتصلك آخر الأخبار والفعاليات</p>
+                    <div class="newsletter">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                            <button class="btn btn-primary" type="button">اشترك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 مؤسسة آفاق شبابية. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">سياسة الخصوصية</a>
+                    <a href="#" class="text-light">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
